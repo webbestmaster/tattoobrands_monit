@@ -9,7 +9,7 @@ const smtpTransport = require('nodemailer-smtp-transport');
 const {CheckMaster} = require('url-master');
 
 const checkMaster = new CheckMaster({
-    period: 5000, // every 5s
+    period: 60 * 10 * 1e3, // every 10 minutes
     urls: ['http://tattoobrands.by1', 'http://tattoobrands.by:30001', 'http://tattoobrands.by:3000/category/root'],
     onError: urlErr => {
         const mailOptions = {
