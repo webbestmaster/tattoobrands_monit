@@ -1,0 +1,32 @@
+{
+  "name": "tattoobrands_monit",
+  "version": "1.0.0",
+  "description": "tattoobrands monit",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "lint-fix": "eslint . --fix",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/webbestmaster/tattoobrands_monit.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/webbestmaster/tattoobrands_monit/issues"
+  },
+  "homepage": "https://github.com/webbestmaster/tattoobrands_monit#readme",
+  "dependencies": {
+    "dotenv": "^4.0.0",
+    "nodemailer": "^4.2.0",
+    "nodemailer-smtp-transport": "^2.7.4",
+    "url-master": "0.0.2"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.0.1",
+    "eslint": "^4.9.0"
+  }
+}
