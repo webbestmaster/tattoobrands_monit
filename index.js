@@ -20,6 +20,8 @@ const guard = {
 
         guard.counter += 1;
 
+        console.log('---> monit counter:', guard.counter);
+
         if (guard.counter >= guard.maxCount) {
             guard.counter = 0;
         }
