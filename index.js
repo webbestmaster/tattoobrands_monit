@@ -13,14 +13,14 @@ const guard = {
     counter: 0,
     maxCount: 60 * 60 * 1e3 / checkPeriod,
     tryRun() {
+        console.log('---> monit counter:', guard.counter);
+
         if (guard.counter === 0) {
             guard.counter = 1;
             return true;
         }
 
         guard.counter += 1;
-
-        console.log('---> monit counter:', guard.counter);
 
         if (guard.counter >= guard.maxCount) {
             guard.counter = 0;
