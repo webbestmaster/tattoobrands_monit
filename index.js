@@ -1,6 +1,8 @@
 /* global process */
 require('dotenv').config();
 
+const urls = ['http://tattoobrands.by', 'http://tattoobrands.by/category/root'];
+
 const {ADMIN_EMAIL, ADMIN_PASS} = process.env; // eslint-disable-line no-process-env
 
 const nodemailer = require('nodemailer');
@@ -53,7 +55,7 @@ function sendMail(errorUrls) {
 
 const checkMaster = new CheckMaster({
     period: checkPeriod, // every 10 seconds
-    urls: ['http://tattoobrands.by', 'http://tattoobrands.by:3000', 'http://tattoobrands.by:3000/category/root'],
+    urls,
     onError: errorUrls => guard.tryRun() && sendMail(errorUrls)
 });
 
