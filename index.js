@@ -9,7 +9,7 @@ const nodemailer = require('nodemailer');
 const smtpTransport = require('nodemailer-smtp-transport');
 
 const {CheckMaster} = require('url-master');
-const checkPeriod = 10e3; // 10 seconds
+const checkPeriod = 10e3 * 60; // 10 menites
 
 const guard = {
     counter: 0,
